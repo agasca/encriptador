@@ -3,7 +3,27 @@ body{
 }
 
 header {
-    background-color: #BBBBBB;
+    background-color: #FEFEFE;
+    padding: 20px 0;
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+p{
+    text-align: center;
+}
+
+main{
+    background-color: linear-gradient(#FEFEFE, #888888);
+    padding: 20px 0;
+}
+
+footer{
+    background-color: #888888;
     padding: 20px 0;
 }
 

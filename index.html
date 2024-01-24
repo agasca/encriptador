@@ -1,19 +1,39 @@
 <!DOCTYPE html>
-
-
-
 <html lang="es">
     <head>
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Encriptador AG</title>
+        <title>Encriptador de texto AG</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <title>Test</title>
 </head>
 <body>
-    área de prueba
+    <header>
+        <div class="caja">
+            <h1><img src="imagenes/Logo.png"></h1>
+        </div>
+        <section>
+            <p>Encabezado</p>
+        </section>
+    </header>
+    <main>
+        <section>
+            <p>principal</p>
+                <label for="entradaTexto"></label>
+                <input type="text" id="entradaTexto" class="input-padron" required placeholder="Ingresa el texto aquí">
+                <button onclick="encriptar()">Encriptar</button>
+                <button onclick="desencriptar()">DesEncriptar</button>
+            <textarea cols="70" rows="10" id="mensaje" class="input-padron" ></textarea>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <p class="copyright">&copy Elaboró Alberto Gasca Bernal para entrenamiento Alura Oracle ONE - 2024 G6 </p>
+        </section>
+    </footer>
+    <script src="app.js"></script>
 </body>
 </html>
