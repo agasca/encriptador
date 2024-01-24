@@ -8,9 +8,14 @@ header {
 }
 
 .caja{
+    margin: 40px 40px;
+    width: 120px;
+    height: 480px;
+    /*
     width: 940px;
     position: relative;
     margin: 0 auto;
+    */
 }
 
 p{
@@ -21,6 +26,48 @@ main{
     background-color: linear-gradient(#FEFEFE, #888888);
     padding: 20px 0;
 }
+
+.entradaTexto{/*OK*/
+    width: 557px;
+    height: 48px;
+    margin: 168px 240px;
+    padding: 5px 5px;
+    display: block;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    color: #0a3871;
+}
+
+.salidaTexto{
+    width: 557px;
+    height: 48px;
+}
+
+#anuncioTexto{
+    background: blue;
+    width: 228px;
+    height: 18px;
+    margin: 851px 240px;
+}
+
+.cajaBoton{
+    /*background: blue;/*Seguimiento*/
+    width: 680px;
+    height: 67px;
+    margin: 885px 240px;
+}
+
+.enviarDes_Encriptar{
+    /*background: blue;/*Seguimiento*/
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    border-radius: 24px;
+    transition: 1s all;
+    cursor:pointer;
+}
+
 
 footer{
     background-color: #888888;

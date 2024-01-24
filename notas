@@ -1,0 +1,5 @@
+background: blue;/*Seguimiento*/
+/*background: blue;*//*Seguimiento*/
+
+
+<input type="text" id="entradaTexto" class="input-padron" required placeholder="Ingresa el texto aquí">

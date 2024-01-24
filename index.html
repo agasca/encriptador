@@ -23,10 +23,16 @@
         <section>
             <p>principal</p>
                 <label for="entradaTexto"></label>
-                <input type="text" id="entradaTexto" class="input-padron" required placeholder="Ingresa el texto aquí">
-                <button onclick="encriptar()">Encriptar</button>
-                <button onclick="desencriptar()">DesEncriptar</button>
-            <textarea cols="70" rows="10" id="mensaje" class="input-padron" ></textarea>
+                <input type="text" class="entradaTexto" required placeholder="Ingresa el texto aquí">
+                
+                <label for="anuncio" id="anuncioTexto">Solo letras minúsculas y sin acentos</label>
+
+                <textarea class="salidaTexto"></textarea>
+                
+                <div class = "cajaBoton">
+                    <button onclick="encriptar()" class="enviarDes_Encriptar">Encriptar</button>
+                    <button onclick="desencriptar()" class="enviarDes_Encriptar">DesEncriptar</button>
+                </div>
         </section>
     </main>
     <footer>

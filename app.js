@@ -1,10 +1,15 @@
 console.log("Bienvenido");
 let parrafoSalida = document.querySelector('textarea');
 
+
+
+/*Como utilizar 
+let parrafo = document.getElementsByClassName('.entradaTexto').value;
+parrafoSalida.innerHTML = "Encriptar " + parrafo;
+*/
 function encriptar(){
     console.log("Encriptar");
-    //let parrafo1 = document.querySelector('input').value;
-    let parrafo = document.getElementById('entradaTexto').value;
+    let parrafo = document.querySelector('.entradaTexto').value;
     parrafoSalida.innerHTML = "Encriptar " + parrafo;
 }
 
@@ -12,7 +17,7 @@ function encriptar(){
 
 function  desencriptar(){
     console.log("desEncriptar");
-    let parrafo = document.querySelector('#entradaTexto').value;
+    let parrafo = document.querySelector('.entradaTexto').value;
     parrafoSalida.innerHTML = "desEncriptar " + parrafo;
 }
 
