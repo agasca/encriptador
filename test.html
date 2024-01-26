@@ -1,19 +1,40 @@
 <!DOCTYPE html>
-
-
-
 <html lang="es">
-    <head>
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Barbería Alura</title>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    <title>Test</title>
-</head>
-<body>
-    área de prueba
-</body>
-</html>
+<html>
+        <head>
+            <link rel="stylesheet" href="test.css">
+        <title>Portal web - aprenderaprogramar.com</title> <meta charset="utf-8">
+        <style type="text/css">
+            /*Krall, C. (2021). Diseño web CSS dos, tres, cuatro columnas con float ¿width en porcentajes no funciona? Ejemplos (CU01036D). Aprenderaprogramar.com. https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=741:diseno-web-css-dos-tres-cuatro-columnas-con-float-iwidth-en-porcentajes-no-funciona-ejemplos-cu01036d&catid=75&Itemid=203*/        
+            /* Curso CSS estilos aprenderaprogramar.com*/
+            *{font-family: 'Courier New';}
+            body {background-color:lightcyan;                    width:410px; border-style: dotted; border-width:2px; }
+            div  {background-color:#FFEFD5; margin:7px;     padding:7px;      border-style: solid;  border-width:2px;  }
+            
+            /*La anchura del contenido de la caja 1 es:
+                410 - 14 de margin - 4 de border - 14 de padding, resulta 378 px*/
+            #caja1{ border-color:red;}
+            #caja2{ border-color:blue;      margin:0 7px 7px 7px; width:75px;  float:left;  height:200px; }
+            
+            /*Ancho total 
+                410 px - 8px bordes - 21 px de margin - 28 de padding -75px contenido caja 2, obtenemos 278 px*/
+            #caja3{ border-color:green;     margin:0 7px 7px 0px; width:278px; float: left; height:300px;}
+            #caja4{ border-color:orange; clear:both;                                        height:55px;}
+
+        </style>
+        </head>
+        <body>
+            <div id="caja1">Caja 1 
+                <div class="interior">100% caja 1</div>
+            </div>
+            <div id="caja2">Caja 2 con width 410 px y margin-left 20px
+                <div class="interior">100% caja 2</div>
+            </div>
+            <div id="caja3">Caja 3 con width 410 px, margin-left 20 px y padding-left 20px
+                <div class="interior">100% caja 3</div>
+            </div>
+            <div id ="caja4">Caja 4 con width 410 px, margin-left 20 px, padding-left 20px y border-left-width 20 px
+                <div class="interior">100% caja 4</div>
+            </div>
+        </body>
+        </html>

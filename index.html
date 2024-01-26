@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+<html>
     <head>
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +15,9 @@
         <div class="caja">
             <h1><img src="imagenes/Logo.png"></h1>
         </div>
-        <section>
-            <p></p>
-        </section>
     </header>
     <main>
-        <section>
-            <div class="cajaPrincipal">
+            <div id="caja3" class="cajaPrincipal">
                 <p></p>
                 <label for="entradaTexto"></label>
                 <input type="text" class="entradaTexto" required placeholder="Ingresa el texto aquí">
@@ -34,12 +31,14 @@
                     <button onclick="desencriptar()" class="enviarDes_Encriptar">DesEncriptar</button>
                 </div>
             </div>
-        </section>
+            <div id="caja2">
+                <img src=imagenes/munieco.png>
+            </div>
     </main>
     <footer>
-        <section>
+        <div id ="caja4">
             <p class="copyright">&copy Elaboró Alberto Gasca Bernal para entrenamiento Alura Oracle ONE - 2024 G6 </p>
-        </section>
+        </div>
     </footer>
     <script src="app.js"></script>
 </body>
