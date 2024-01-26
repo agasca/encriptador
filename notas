@@ -1,5 +1,95 @@
+/*
+#OracleNextEducation, #helloONEG6
+
++-+-+-+-+-
+Oracle @oracle 
+Alura Latam @aluralatam
+🗣Comentarios: DM
+🌐 Git: github.com/agasca/encriptador
+*/
+
 background: blue;/*Seguimiento*/
 /*background: blue;*//*Seguimiento*/
 
 
 <input type="text" id="entradaTexto" class="input-padron" required placeholder="Ingresa el texto aquí">
+
+
+
+
+--------------
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador de texto AG</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>Test</title>
+</head>
+<body>
+    <header>
+        <div class="caja">
+            <h1><img src="imagenes/Logo.png"></h1>
+        </div>
+        <section>
+            <p>Encabezado</p>
+        </section>
+    </header>
+    <main>
+        <section>
+            <p>principal</p>
+                <label for="entradaTexto"></label>
+                <input type="text" class="entradaTexto" required placeholder="Ingresa el texto aquí">
+                
+                <label id="anuncioTexto">Solo letras minúsculas y sin acentos</label>
+
+                <textarea class="salidaTexto"></textarea>
+                
+                <div class = "cajaBoton">
+                    <button onclick="encriptar()" class="enviarDes_Encriptar">Encriptar</button>
+                    <button onclick="desencriptar()" class="enviarDes_Encriptar">DesEncriptar</button>
+                </div>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <p class="copyright">&copy Elaboró Alberto Gasca Bernal para entrenamiento Alura Oracle ONE - 2024 G6 </p>
+        </section>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+console.log("Bienvenido");
+let parrafoSalida = document.querySelector('textarea');
+
+
+
+/*Como utilizar 
+let parrafo = document.getElementsByClassName('.entradaTexto').value;
+let parrafo = document.getElementById().value;
+parrafoSalida.innerHTML = "Encriptar " + parrafo;
+*/
+function encriptar(){
+    console.log("Encriptar");
+    let parrafo = document.querySelector('.entradaTexto').value;
+    parrafoSalida.innerHTML = "Encriptar " + parrafo;
+}
+
+
+
+function  desencriptar(){
+    console.log("desEncriptar");
+    let parrafo = document.querySelector('.entradaTexto').value;
+    parrafoSalida.innerHTML = "desEncriptar " + parrafo;
+}
+
+
+console.log("fin");

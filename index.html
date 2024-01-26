@@ -2,7 +2,6 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Encriptador de texto AG</title>
         <link rel="stylesheet" href="reset.css">
@@ -16,16 +15,17 @@
             <h1><img src="imagenes/Logo.png"></h1>
         </div>
         <section>
-            <p>Encabezado</p>
+            <p></p>
         </section>
     </header>
     <main>
         <section>
-            <p>principal</p>
+            <div class="cajaPrincipal">
+                <p></p>
                 <label for="entradaTexto"></label>
                 <input type="text" class="entradaTexto" required placeholder="Ingresa el texto aquí">
                 
-                <label for="anuncio" id="anuncioTexto">Solo letras minúsculas y sin acentos</label>
+                <label id="anuncioTexto">Solo letras minúsculas y sin acentos</label>
 
                 <textarea class="salidaTexto"></textarea>
                 
@@ -33,6 +33,7 @@
                     <button onclick="encriptar()" class="enviarDes_Encriptar">Encriptar</button>
                     <button onclick="desencriptar()" class="enviarDes_Encriptar">DesEncriptar</button>
                 </div>
+            </div>
         </section>
     </main>
     <footer>
