@@ -85,14 +85,6 @@ main{
 }
 
 #caja2{ 
-        /*border-color:blue;*/
-        margin:0 7px 7px 7px; 
-        width:325px; 
-        float: right; 
-        height:500px; 
-    }
-
-#caja3{ 
     /*border-color:green;*/
     margin:0 7px 7px 0px; 
     width:880px; 
@@ -100,8 +92,30 @@ main{
     float: left;  
 }
 
+#caja3{ 
+        border-color:blue;
+        margin:0 7px 7px 7px; 
+        width:325px; 
+        float: right; 
+        height:500px; 
+    }
+
+#caja3 p:hover{
+    background: #0c36be;
+    border: 5px solid #000000;
+}
+
+/*
+#caja3 img:hover{
+    background: #0c36be;
+}
+*/
+
+#munieco:hover{
+    background: #000000;
+}
+
 footer{
-    
     text-align: center;
     padding:4px;
 }

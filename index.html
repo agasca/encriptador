@@ -8,35 +8,39 @@
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    <title>Test</title>
+    <title>Encriptador AG</title>
 </head>
 <body>
     <header>
         <div class="caja">
             <h1><img src="imagenes/Logo.png"></h1>
+            <p>caja</p>
         </div>
     </header>
     <main>
-            <div id="caja3" class="cajaPrincipal">
-                <p></p>
+            <div id="caja2" class="cajaPrincipal">
+                <p>caja2</p>
                 <label for="entradaTexto"></label>
-                <input type="text" class="entradaTexto" required placeholder="Ingresa el texto aquí">
+                <input type="text" class="entradaTexto" required placeholder="Ingresa el texto aquí" autofocus>
                 
-                <label id="anuncioTexto">Solo letras minúsculas y sin acentos</label>
+                <label id="anuncioTexto">&#9888; Solo letras minúsculas y sin acentos</label>
 
-                <textarea class="salidaTexto"></textarea>
-                
                 <div class = "cajaBoton">
-                    <button onclick="encriptar()" class="enviarDes_Encriptar">Encriptar</button>
-                    <button onclick="desencriptar()" class="enviarDes_Encriptar">DesEncriptar</button>
+                    <button class="enviarDes_Encriptar" onclick="encriptar()">Encriptar</button>
+                    <button class="enviarDes_Encriptar" onclick="desencriptar()">DesEncriptar</button>
                 </div>
             </div>
-            <div id="caja2">
-                <img src=imagenes/munieco.png>
+            <div id="caja3">
+                <p>caja3</p>
+                    <img id="munieco" src=imagenes/munieco.png>
+                    <textarea class="salidaTexto" 
+                    disabled 
+                    placeholder="Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar"></textarea>
             </div>
     </main>
     <footer>
         <div id ="caja4">
+            <p>caja 4</p>
             <p class="copyright">&copy Elaboró Alberto Gasca Bernal para entrenamiento Alura Oracle ONE - 2024 G6 </p>
         </div>
     </footer>
