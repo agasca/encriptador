@@ -68,31 +68,34 @@ function encriptar(){
                 //switch(parrafo.value[letra]){
                 switch(enc){
                     case 'a':
-                        enc="1";
+                        enc="ai";
                         break;
                     case 'e':
-                        enc="2";
+                        enc="enter";
                         break;
                     case 'i':
-                        enc="3";
+                        enc="imes";
                         break;
                     case 'o':
-                        enc="4";
+                        enc="ober";
                         break;
                     case 'u':
-                        enc="5";
+                        enc="ufat";
                         break;
                     default:
                         enc = parrafo.value[letra];
                         break;                                                                                               
                 }
                 diccionario.push(enc);
+                entrada = 0
             }
-            console.log(diccionario);
+            
         }
+        console.log(diccionario.join(''));
 
 
-        parrafoSalida.innerHTML = "Encriptar " + parrafo.value;
+        //parrafoSalida.innerHTML = "Encriptar " + parrafo.value;
+        parrafoSalida.innerHTML = diccionario.join('');
         //
         //entrada = 0
     }
