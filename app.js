@@ -201,4 +201,5 @@ parrafo.placeholder = "escribit algo"
  * o97. (2024). How to check if string has vowels? Stack Overflow. https://stackoverflow.com/questions/67881090/how-to-check-if-string-has-vowels
  * 
  * 
+ * .
  */
