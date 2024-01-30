@@ -2,8 +2,9 @@ console.log("Bienvenido");
 //create an object reference to the div containing images
 let oImageDiv=document.getElementById('munieco')
 //create an object reference to output
-let parrafoSalida = document.querySelector('textarea');
-let entrada = 0
+//let parrafoSalida = document.querySelector('textarea');
+let parrafoSalida = document.querySelector('.salidaTexto');
+let entrada = 0;
 
 /*Como utilizar 
 let e1 = document.getElementsByClassName('entradaTexto').value;
@@ -17,22 +18,17 @@ console.dir("class Dir "+ e1);
 
 //botones
 function encriptar(){
-    
     //bandera inicializa
     entrada = 1;
     let palabraNueva = null;
     let enc = null;
     let diccionario=[]
-
-    
     //create an object reference to input
     let parrafo = document.querySelector('.entradaTexto');
-    
     if(parrafo.value.length > 0){
         //encriptar
         //alert(parrafo.value.length);
         showHide();
-        
         let verdad = vowelTest(parrafo.value);
         //alert(verdad);
         if (verdad == true || verdad > 0) 
@@ -80,7 +76,7 @@ function encriptar(){
                         enc="ober";
                         break;
                     case 'u':
-                        enc="ufat";
+                        enc="ufaqt";
                         break;
                     default:
                         enc = parrafo.value[letra];
@@ -89,26 +85,47 @@ function encriptar(){
                 diccionario.push(enc);
                 entrada = 0
             }
-            
         }
         console.log(diccionario.join(''));
-
-
         //parrafoSalida.innerHTML = "Encriptar " + parrafo.value;
         parrafoSalida.innerHTML = diccionario.join('');
         //
         //entrada = 0
     }
-
     //alert(entrada);
     if (entrada == 0){
         //inicializa input
         parrafo.value=null;
         parrafo.focus(); //document.querySelector('.entradaTexto').focus();
         parrafo.placeholder = "Ingresa el texto aquí.";
-    }
-
+    }    
 }
+
+
+function  desencriptar(){
+
+    //create an object reference to input
+    let parrafo = document.querySelector('.entradaTexto').value;
+    console.log("contenido a desencriptar: " + parrafo);
+    //console.log(parrafo.replaceAll("ai","a"));
+    const mapObj = {
+        ai: "a",
+        enter: "e",
+        imes: "i",
+        ober:"o",
+        ufaqt: "u"
+      };
+    console.log(mapObj);
+    //parrafo = "aienterimesoberufaqt";
+    console.log(": "+parrafo);
+    //parrafo = parrafo.replace(/\b(?:ai|enter|imes|ober|ufaqt)\b/gi, matched => mapObj[matched]);
+    parrafo = parrafo.replace(/(?:ai|enter|imes|ober|ufaqt)/gi, matched => mapObj[matched]);
+    console.log("R: "+parrafo);
+    parrafoSalida.innerHTML = "desEncriptar: " + parrafo;
+    //parrafoSalida.innerHTML = parrafo.replaceAll("ai","a");
+    hideShow()
+}
+
 
 function vowelTest(s) {
     //alert(s);
@@ -125,13 +142,20 @@ function vowelTest(s) {
 
 }
     
-function  desencriptar(){
-    //create an object reference to input
-    let parrafo = document.querySelector('.entradaTexto').value;
-    
-    parrafoSalida.innerHTML = "desEncriptar " + parrafo;
-    hideShow()
+
+function copiar(){
+    let parrafo = document.querySelector('.entradaTexto');
+    if(document.querySelector('.salidaTexto').value.length == 0 || document.querySelector('.salidaTexto').value == null){
+        alert("nada que copiar");
+    }else{
+        //recordar que ya se tiene en un diccionario pero esta dentro de una funcion
+        parrafo.value = document.querySelector('.salidaTexto').value;
+    }
+    //alert("tam "+document.querySelector('.salidaTexto').value.length + " " + document.querySelector('.salidaTexto').value);
+    //regresar el foco al input
 }
+
+
 
 
 //imagen
@@ -202,7 +226,22 @@ parrafo.placeholder = "escribit algo"
  * aqui la manera de crear el contador de caracteres | Foro Alura Latam. (2022, March 3). Alura Latam. https://app.aluracursos.com/forum/topico-aqui-la-manera-de-crear-el-contador-de-caracteres-112367
  * Kanna, M. (2021, January 18). How to Find the Number of Vowels in a String with JavaScript. FreeCodeCamp.org; freeCodeCamp.org. https://www.freecodecamp.org/news/find-the-number-of-vowels-in-a-string-with-javascript/
  * o97. (2024). How to check if string has vowels? Stack Overflow. https://stackoverflow.com/questions/67881090/how-to-check-if-string-has-vowels
+ * Green, A. (2024). Replace multiple strings with multiple other strings. Stack Overflow. https://stackoverflow.com/questions/15604140/replace-multiple-strings-with-multiple-other-strings
+ * Word boundary: \b. (2021). Word boundary: \b. Javascript.info. https://javascript.info/regexp-boundary
+ * 
+ * 
+ * 
+ * 
+ * hola beto como estas, espero que bien. yo muy agusto
  * 
  * 
  * .
+ * matched => mapObj[matched])
+ * equivale a...
+ * function(matched){
+        return mapObj[matched];
+
+
+
  */
+
