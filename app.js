@@ -123,20 +123,6 @@ console.log("fin");
  *
  * 
  * fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!
- *                                                                                                        cobernclufatimesdober
- *                                                                                           concluido <> conclundefinedido
- *                                                                                                        co   nclu   i   do
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
  * 
  * 
  * 

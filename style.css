@@ -115,11 +115,15 @@ main{
     height: 122px;
     top: 619px;
     left:1032px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.8px;
+    color: #0a3871;
 }
 
 #enviarCopiar{
-    position: relative; 
-    margin: 547px 1033px;
+    position: absolute; 
+    margin: 885px 1090px;
 }
 
 
