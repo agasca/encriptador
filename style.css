@@ -2,178 +2,138 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-header {
-    /*background-color: #f31a1a;*/
-    padding: 2px 0;
+.contenedor{
+    position: absolute;
+    background: hsl(227, 60%, 97%);
+    width: 1440px;
+    height: 1024px;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+/*     top: 622px;
+    left: -2277px; 
+*/
+}
+
+header{
+    height: 0;
 }
 
 .caja{
-    margin: 40px 40px;
-    width: 120px;
-    height: 48px;
-    /*
-    width: 940px;
-    position: relative;
-    margin: 0 auto;
-    */
+    height: 0;
+    position: absolute;
+    top: 40px;
+    left: 40px;
 }
 
-p{
-    text-align: center;
-}
+.contenedor caja img{
+        width: 120px;
+        height: 48px;
+    }
 
-div  {
-    /*
-    background-color:#FFEFD5; 
-    */
-    margin:7px;     
-    padding:7px;
-    /*      
-    border-style: solid;  
-    border-width:2px;  
-    */
-}
 
 main{
-    background-color: linear-gradient(#FEFEFE, #888888);
-    padding: 20px 0;
-}
+        height: 0;
+        left:0;
+    }
 
 .cajaPrincipal{
-    height: 480px;
+    height: 0;
+    left:0;
 }
 
 .entradaTexto{/*OK*/
+    position: absolute;
+/*     position: relative; 
+    top: 168px;
+    left: 240px;  */   
+    margin: 120px 240px;
     width: 557px;
     height: 48px;
-    margin: 120px 240px;
+    /*     
     padding: 5px 5px;
-    display: block;
-    font-size: 32px;
+    display: block; 
+    */
     font-weight: 400;
+    font-size: 32px;
     line-height: 48px;
     color: #0a3871;
-}
+}    
 
 #anuncioTexto{
-    width: 28px;
-    height: 18px;
+    position: absolute;
+/*     position: relative; 
+    top: 851px;
+    left: 240px; */    
+/*     clear:left; */
     margin: 851px 240px;
-}
-
-.salidaTexto{
-    width: 557px;
-    height: 48px;
-    margin: 8px 240px;
+    width: 229px;
+    height: 18px;
 }
 
 .cajaBoton{
-    /*background: blue;/*Seguimiento*/
+    position: absolute; 
+/*     top: 885px;
+    left: 240px;  */ 
+    margin: 885px 240px;  
     width: 680px;
     height: 67px;
-    margin: 5px 172px;
 }
 
 .enviarDes_Encriptar{
-    /*background: blue;/*Seguimiento*/
     width: 328px;
     height: 67px;
-    padding: 24px;
     border-radius: 24px;
-    transition: 1s all;
+    padding: 24px;
+    /* transition: 1s all; */
     cursor:pointer;
 }
 
-#caja2{ 
-    /*border-color:green;*/
-    margin:0 7px 7px 0px; 
-    width:880px; 
-    height:500px;
-    float: left;  
+.caja3{ 
+    float: right; 
+    /* position: absolute;  */
+    margin: 40px 1000px;
+/*     top: 40px;
+    left: 1000px;   */  
+    width: 400px;
+    height: 944px;
+    border-color:blue;
+    border-style: solid;
 }
 
-#caja3{ 
-        border-color:blue;
-        margin:0 7px 7px 7px; 
-        width:325px; 
-        float: right; 
-        height:500px; 
-    }
 
-#caja3 p:hover{
-    background: #0c36be;
-    border: 5px solid #000000;
+#munieco{
+    position: absolute;
+    width: 336px;
+    height: 304px;
+    margin: 283px 1032px;
 }
 
-/*
-#caja3 img:hover{
-    background: #0c36be;
-}
-*/
-
-#munieco:hover{
-    background: #000000;
+.salidaTexto{
+    position: relative; 
+    width: 336px;
+    height: 122px;
+    top: 619px;
+    left:1032px;
 }
 
-footer{
-    text-align: center;
-    padding:4px;
+#enviarCopiar{
+    position: relative; 
+    margin: 547px 1033px;
 }
-#caja4{ 
-    /*border-color:orange; */
-    clear:both;                                        
-    height:55px;
-}
+
 
 .copyright{
+    position: absolute; 
+    margin: 970px 240px;
+/*     top: 885px;
+    left: -240px;     */
+    clear:both;                                        
+    height:55px;
+    text-align: center;
     color:#0c36be;
     font-size: 13px;
-    margin:20px;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Aquí inicia el CSS para nuestra home*/
-
-
-
-/*Llaves*/
-/**
-La letra "e" es convertida para "enter"
-La letra "i" es convertida para "imes"
-La letra "a" es convertida para "ai"
-La letra "o" es convertida para "ober"
-La letra "u" es convertida para "ufat"
-Requisitos:
-
-Debe funcionar solo con letras minúsculas
-
-No deben ser utilizados letras con acentos ni caracteres especiales
-
-Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.
-
-Por ejemplo:
-"gato" => "gaitober"
-gaitober" => "gato"
-
-La página debe tener campos parainserción del texto que será encriptado o desencriptado, y el usuario debe poder escoger entre as dos opciones.
-
-El resultado debe ser mostrado en la pantalla.
-
-Extras:
-
-Un botón que copie el texto encriptado/desencriptado para la sección de transferencia, o sea que tenga la misma funcionalidad del ctrl+C o de la opción "copiar" del menú de las aplicaciones.
-.
-*/
+/* un. (2017, December 17). ¿Cuándo debería mover un elemento con margen o una posicion? Stack Overflow En Español. https://es.stackoverflow.com/questions/125422/cu%C3%A1ndo-deber%C3%ADa-mover-un-elemento-con-margen-o-una-posicion */

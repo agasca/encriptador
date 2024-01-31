@@ -10,38 +10,34 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <title>Encriptador AG</title>
 </head>
-<body>
+<body class="contenedor">
     <header>
         <div class="caja">
-            <h1><img src="imagenes/Logo.png"></h1>
-            <p>caja</p>
+            <img src="imagenes/Logo.png" alt="Logotipo Alura">
         </div>
     </header>
     <main>
-            <div id="caja2" class="cajaPrincipal">
-                <p>caja2</p>
-                <label for="entradaTexto"></label>
+            <div class="cajaPrincipal">
+                <!-- <label for="entradaTexto"></label> -->
                 <input type="text" class="entradaTexto" required placeholder="Ingresa el texto aquí" autofocus>
-                
                 <label id="anuncioTexto">&#9888; Solo letras minúsculas y sin acentos</label>
+                
 
                 <div class = "cajaBoton">
                     <button class="enviarDes_Encriptar" onclick="encriptar()">Encriptar</button>
                     <button class="enviarDes_Encriptar" onclick="desencriptar()">DesEncriptar</button>
                 </div>
             </div>
-            <div id="caja3">
-                <p>caja3</p>
-                    <img id="munieco" src=imagenes/munieco.png>
-                    <textarea class="salidaTexto" 
-                    disabled 
-                    placeholder="Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar"></textarea>
-                    <button class="enviarDes_Encriptar" onclick="copiar()">Copiar</button>
-            </div>
+            <div class="caja3">
+                <img id="munieco" src=imagenes/munieco.png alt="Imagen de una persona">
+                <textarea class="salidaTexto" 
+                disabled 
+                placeholder="Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar"></textarea>
+                <button id="enviarCopiar" class="enviarDes_Encriptar" onclick="copiar()">Copiar</button>
+                </div>
     </main>
     <footer>
         <div id ="caja4">
-            <p>caja 4</p>
             <p class="copyright">&copy Elaboró Alberto Gasca Bernal para entrenamiento Alura Oracle ONE - 2024 G6</p>
         </div>
     </footer>
