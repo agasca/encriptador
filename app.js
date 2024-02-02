@@ -1,8 +1,9 @@
 //console.log("Bienvenido");
 
 let oImageDiv=document.getElementById('munieco')    //create an object reference to the div containing images
-
-let parrafoSalida = document.querySelector('.salidaTexto'); //create an object reference to output  //let parrafoSalida = document.querySelector('textarea');
+let parrafoGrande = document.getElementsByClassName('salidaTextoGrande');
+let parrafoChico = document.getElementsByClassName('salidaTextoChico');
+let parrafoSalida = document.querySelector('.salidaTextoChico'); //create an object reference to output  //let parrafoSalida = document.querySelector('textarea');
 let entrada = 0;
 
 
@@ -77,10 +78,10 @@ function vowelTest(s) {
 
 function copiar(){
     let parrafo = document.querySelector('.entradaTexto');
-    if(document.querySelector('.salidaTexto').value.length == 0 || document.querySelector('.salidaTexto').value == null){
+    if(document.querySelector('.salidaTextoChico').value.length == 0 || document.querySelector('.salidaTextoChico').value == null){
         alert("nada que copiar");
     }else{  //recordar que ya se tiene en un diccionario pero esta dentro de una funcion
-        parrafo.value = document.querySelector('.salidaTexto').value;
+        parrafo.value = document.querySelector('.salidaTextoChico').value;
     }
     //alert("tam "+document.querySelector('.salidaTexto').value.length + " " + document.querySelector('.salidaTexto').value);
     //regresar el foco al input
@@ -89,6 +90,34 @@ function copiar(){
 
 function showHide(){    //imagen
     oImageDiv.style.display=(oImageDiv.style.display=='none')?'inline':'none';   //set display to inline if currently none, otherwise to none
+    parrafoGrande[0].style.display='none';
+    parrafoChico[0].style.display='none';
+
+    var elem2 = document.createElement('label');
+    elem2.style.position="absolute";
+    elem2.style.top="100px";
+    elem2.style.left="1000px";
+    elem2.width="40";
+    elem2.innerHTML = "something";    
+    document.getElementsByTagName('body')[0].appendChild(elem2);
+
+
+
+    var imagen = document.createElement("img");
+imagen.src="imagenes/Logo.png";
+imagen.style.position= "absolute";
+imagen.style.display="block";
+imagen.style.top="150px";
+imagen.style.left="1000px";
+imagen.style.top="1150";
+imagen.width="40";
+imagen.height="40";
+
+imagen.style.display="block";
+imagen.style.margin = "auto";
+
+document.body.appendChild(imagen);
+
 }
 
 
@@ -144,4 +173,11 @@ El resultado debe ser mostrado en la pantalla.
 Extras:
 Un botón que copie el texto encriptado/desencriptado para la sección de transferencia, o sea que tenga la misma funcionalidad del ctrl+C o de la opción "copiar" del menú de las aplicaciones.
 * 
+*
+*
+*
+var viewport = document.querySelector("meta[name=viewport]");
+viewport.setAttribute("content", "width=device-width, initial-scale=1.0");
+*
+*
 */

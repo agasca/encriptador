@@ -1,143 +1,152 @@
-body{
-    font-family: 'Montserrat', sans-serif;
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .contenedor{
-    position: absolute;
     background: hsl(227, 60%, 97%);
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
     width: 1440px;
     height: 1024px;
-    top: 0;
-    left: 0;
-    margin: 0 auto;
-/*     top: 622px;
-    left: -2277px; 
-*/
 }
 
-header{
-    height: 0;
-}
 
+/* ini.input */
 .caja{
-    height: 0;
     position: absolute;
     top: 40px;
     left: 40px;
 }
 
-.contenedor caja img{
-        width: 120px;
-        height: 48px;
-    }
-
-
-main{
-        height: 0;
-        left:0;
-    }
-
-.cajaPrincipal{
-    height: 0;
-    left:0;
-}
-
-.entradaTexto{/*OK*/
+.entradaTexto{
     position: absolute;
-/*     position: relative; 
     top: 168px;
-    left: 240px;  */   
-    margin: 120px 240px;
-    width: 557px;
-    height: 48px;
-    /*     
-    padding: 5px 5px;
-    display: block; 
-    */
+    left: 240px;
     font-weight: 400;
     font-size: 32px;
     line-height: 48px;
-    color: #0a3871;
-}    
+    color: #0a3871;    
+}
 
-#anuncioTexto{
+.anuncioTexto{
     position: absolute;
-/*     position: relative; 
-    top: 851px;
-    left: 240px; */    
-/*     clear:left; */
-    margin: 851px 240px;
-    width: 229px;
-    height: 18px;
+    top:851px;
+    left:240px;
 }
 
 .cajaBoton{
-    position: absolute; 
-/*     top: 885px;
-    left: 240px;  */ 
-    margin: 885px 240px;  
-    width: 680px;
-    height: 67px;
+    position:absolute;
+    top: 885px;
+    left:240px;
 }
 
 .enviarDes_Encriptar{
     width: 328px;
     height: 67px;
     border-radius: 24px;
-    padding: 24px;
-    /* transition: 1s all; */
+    transition: 1s all;
     cursor:pointer;
 }
 
-.caja3{ 
-    float: right; 
-    /* position: absolute;  */
-    margin: 40px 1000px;
-/*     top: 40px;
-    left: 1000px;   */  
+#enc{
+    background: #0A3871;
+    color: white;
+}
+/* fin.input */
+
+
+
+
+
+/* ini.messages */
+.caja3{
+    position: absolute;
+    background: white;
+    float:right;
     width: 400px;
     height: 944px;
-    border-color:blue;
-    border-style: solid;
+    top: 40px;
+    left: 1000px;
+    border-radius: 32px;
 }
-
 
 #munieco{
     position: absolute;
     width: 336px;
     height: 304px;
-    margin: 283px 1032px;
+    top:283px;
+    left: 20px;
 }
 
-.salidaTexto{
-    position: relative; 
+
+.salidaTextoGrande{
+    position: absolute;
+    top:619px;
+    left:50px;
     width: 336px;
-    height: 122px;
-    top: 619px;
-    left:1032px;
+    height: 58px;
     font-weight: 700;
     font-size: 24px;
     line-height: 28.8px;
-    color: #0a3871;
+    text-align: center;
+    resize: none;
 }
+
+
+.salidaTextoChico{
+    position: absolute;
+    top:675px;
+    left:50px;
+    width: 336px;
+    height: 48px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    resize: none;
+}
+
 
 #enviarCopiar{
     position: absolute; 
-    margin: 885px 1090px;
+    margin: 885px 1032px;
 }
+/* fin.messages */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .copyright{
-    position: absolute; 
-    margin: 970px 240px;
-/*     top: 885px;
-    left: -240px;     */
-    clear:both;                                        
+    position: absolute;
+    top: 970px ;
+    left: 240px;
     height:55px;
     text-align: center;
     color:#0c36be;
     font-size: 13px;
 }
-
-
-/* un. (2017, December 17). ¿Cuándo debería mover un elemento con margen o una posicion? Stack Overflow En Español. https://es.stackoverflow.com/questions/125422/cu%C3%A1ndo-deber%C3%ADa-mover-un-elemento-con-margen-o-una-posicion */

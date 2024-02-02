@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta name="viewport" content="width=device-width"> -->
         <title>Encriptador de texto AG</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
@@ -11,6 +12,7 @@
     <title>Encriptador AG</title>
 </head>
 <body class="contenedor">
+    contenedor
     <header>
         <div class="caja">
             <img src="imagenes/Logo.png" alt="Logotipo Alura">
@@ -20,21 +22,28 @@
             <div class="cajaPrincipal">
                 <!-- <label for="entradaTexto"></label> -->
                 <input type="text" class="entradaTexto" required placeholder="Ingresa el texto aquí" autofocus>
-                <label id="anuncioTexto">&#9888; Solo letras minúsculas y sin acentos</label>
+                <label class="anuncioTexto">&#9888; Solo letras minúsculas y sin acentos</label>
                 
 
                 <div class = "cajaBoton">
-                    <button class="enviarDes_Encriptar" onclick="encriptar()">Encriptar</button>
-                    <button class="enviarDes_Encriptar" onclick="desencriptar()">DesEncriptar</button>
+                    <button id="enc" class="enviarDes_Encriptar" onclick="encriptar()">Encriptar</button>
+                    <button id="des"class="enviarDes_Encriptar" onclick="desencriptar()">DesEncriptar</button>
                 </div>
             </div>
             <div class="caja3">
                 <img id="munieco" src=imagenes/munieco.png alt="Imagen de una persona">
-                <textarea class="salidaTexto" 
-                disabled 
-                placeholder="Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar"></textarea>
+                <textarea class="salidaTextoGrande" 
+                readonly 
+                style="border: none;"
+                placeholder="Ningún mensaje fue encontrado."></textarea>
+                <textarea class="salidaTextoChico" 
+                readonly
+                style="border: none"
+                placeholder="Ingresa el texto que desees encriptar o desencriptar"></textarea>
             </div>
+            
             <button id="enviarCopiar" class="enviarDes_Encriptar" onclick="copiar()">Copiar</button>
+
     </main>
     <footer>
         <div id ="caja4">
