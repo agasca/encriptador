@@ -5,7 +5,7 @@ let parrafoGrande = document.getElementsByClassName('salidaTextoGrande');
 let parrafoChico = document.getElementsByClassName('salidaTextoChico');
 let parrafoSalida = document.querySelector('.salidaTextoChico'); //create an object reference to output  //let parrafoSalida = document.querySelector('textarea');
 let entrada = 0;
-
+let elem2 = document.createElement('textarea');
 
 function encriptar(){   //bandera inicializa
     entrada = 1;
@@ -45,7 +45,48 @@ function encriptar(){   //bandera inicializa
             }
         }
         //console.log(diccionario.join(''));
-        parrafoSalida.innerHTML = diccionario.join(''); //parrafoSalida.innerHTML = "Encriptar " + parrafo.value;
+
+        //crea objeto label para desplegar resultado
+        //var elem2 = document.createElement('label');
+        //var elem2 = document.createElement('textarea');
+        document.getElementsByTagName('body')[0].appendChild(elem2).style.display="inline";
+        elem2.style.position="absolute";
+        elem2.style.top="65px";
+        elem2.style.left="1010px";
+        elem2.style.fontSize= "32px";
+        elem2.style.fontWeight= "400";
+        elem2.width="140px";
+        elem2.style.height="800px";
+        elem2.style.border="none";
+        elem2.style.resize="none";
+        //elem2.innerHTML = "something";    
+        elem2.innerHTML = diccionario.join('');    
+        document.getElementsByTagName('body')[0].appendChild(elem2);
+        //document.getElementsByTagName('body')[0].appendChild(elem2).style.display="none";   //oculta el objeto
+
+        //parrafoChico[0].style.display='inline';        
+        document.querySelector('.salidaTextoChico').value =  diccionario.join('');
+
+    
+        /*     
+        //despliega imagen
+        var imagen = document.createElement("img");
+        imagen.src="imagenes/Logo.png";
+        imagen.style.position= "absolute";
+        imagen.style.display="block";
+        imagen.style.top="150px";
+        imagen.style.left="1000px";
+        imagen.style.top="1150";
+        imagen.width="40";
+        imagen.height="40";
+        
+        imagen.style.display="block";
+        imagen.style.margin = "auto";
+        
+        document.body.appendChild(imagen);
+        */
+
+        /* parrafoSalida.innerHTML = diccionario.join(''); //parrafoSalida.innerHTML = "Encriptar " + parrafo.value; */
     }
     if (entrada == 0){  //inicializa input
         parrafo.value=null;
@@ -56,6 +97,7 @@ function encriptar(){   //bandera inicializa
 
 
 function  desencriptar(){
+    showHide();
     let parrafo = document.querySelector('.entradaTexto').value;    //create an object reference to input
     //console.log("contenido a desencriptar: " + parrafo);
     const mapObj = {
@@ -66,8 +108,23 @@ function  desencriptar(){
         ufat: "u"
       };
     parrafo = parrafo.replace(/(?:ai|enter|imes|ober|ufat)/gi, matched => mapObj[matched]);        //parrafo = parrafo.replace(/\b(?:ai|enter|imes|ober|ufaqt)\b/gi, matched => mapObj[matched]);
-    parrafoSalida.innerHTML = "desEncriptar: " + parrafo;
-    hideShow()
+    //parrafoSalida.innerHTML = "desEncriptar: " + parrafo;
+
+    document.getElementsByTagName('body')[0].appendChild(elem2).style.display="inline";
+    elem2.style.position="absolute";
+    elem2.style.top="65px";
+    elem2.style.left="1010px";
+    elem2.style.fontSize= "32px";
+    elem2.style.fontWeight= "400";
+    elem2.width="140px";
+    elem2.style.height="800px";
+    elem2.style.border="none";
+    elem2.style.resize="none";
+    //document.getElementsByTagName('body')[0].appendChild(elem2);
+
+
+    elem2.innerHTML = "desEncriptar: " + parrafo;
+    document.querySelector('.salidaTextoChico').value = parrafo;
 }
 
 
@@ -82,6 +139,10 @@ function copiar(){
         alert("nada que copiar");
     }else{  //recordar que ya se tiene en un diccionario pero esta dentro de una funcion
         parrafo.value = document.querySelector('.salidaTextoChico').value;
+        //document.getElementsByTagName('body')[0].appendChild(elem2).value=null;
+        //document.getElementsByTagName('textarea').value="199ooo";
+        elem2.style.display="none";
+        hideShow();
     }
     //alert("tam "+document.querySelector('.salidaTexto').value.length + " " + document.querySelector('.salidaTexto').value);
     //regresar el foco al input
@@ -91,38 +152,16 @@ function copiar(){
 function showHide(){    //imagen
     oImageDiv.style.display=(oImageDiv.style.display=='none')?'inline':'none';   //set display to inline if currently none, otherwise to none
     parrafoGrande[0].style.display='none';
-    parrafoChico[0].style.display='none';
-
-    var elem2 = document.createElement('label');
-    elem2.style.position="absolute";
-    elem2.style.top="100px";
-    elem2.style.left="1000px";
-    elem2.width="40";
-    elem2.innerHTML = "something";    
-    document.getElementsByTagName('body')[0].appendChild(elem2);
+    //parrafoChico[0].style.display='none';
 
 
-
-    var imagen = document.createElement("img");
-imagen.src="imagenes/Logo.png";
-imagen.style.position= "absolute";
-imagen.style.display="block";
-imagen.style.top="150px";
-imagen.style.left="1000px";
-imagen.style.top="1150";
-imagen.width="40";
-imagen.height="40";
-
-imagen.style.display="block";
-imagen.style.margin = "auto";
-
-document.body.appendChild(imagen);
 
 }
 
 
 function hideShow(){
-    oImageDiv.style.display=(oImageDiv.style.display=='inline')?'none':'inline'; //set display to inline if currently none, otherwise to none
+    oImageDiv.style.display=(oImageDiv.style.display=='none')?'inline':'none'; //set display to inline if currently none, otherwise to none
+    //oImageDiv.style.display=(oImageDiv.style.display=='inline')?'none':'inline'; //set display to inline if currently none, otherwise to none
 }
 console.log("fin");
 
