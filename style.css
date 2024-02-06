@@ -50,7 +50,17 @@
     cursor:pointer;
 }
 
-#enc{
+#enc:hover{
+    background: #0A3871;
+    color: white;
+}
+
+#des:hover{
+    background: #0A3871;
+    color: white;
+}
+
+#enviarCopiar:hover{
     background: #0A3871;
     color: white;
 }
