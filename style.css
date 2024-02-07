@@ -145,6 +145,13 @@
 
 
 
+
+
+
+
+
+
+
 /* media */
 @media screen and (max-width: 480px){
 *{
@@ -153,29 +160,37 @@
     box-sizing: border-box;
     }
     
-body{
-    background: red;
-    }
 
 .contenedor{
-    /* background: hsl(227, 60%, 97%); */
+    background: hsl(227, 60%, 97%);
     font-family: 'Montserrat', sans-serif;
-    position: absolute;
+    /* position: absolute; */
     width: 375px;
     height: 933px;
-    top: 3588px;
+    /* top: 120px;
+    left: 2px; */
     /* left: -2277px; */
     }
 
 .caja{
+    top: 0;
+    left: 0;
     width: 375px;
     height: 96px;
     }
 
+.caja img{
+    position: absolute;
+    top: 24px;
+    left: 16px;
+
+    height: 48px;
+}
+
 .entradaTexto{
         position: absolute;
         top: 152px;
-        left: 26px;
+        left: 16px;
         width: 343px;
         height: 48px;
         font-weight: 400;
@@ -184,4 +199,99 @@ body{
         color: #0a3871;    
     }
 
+.anuncioTexto{
+        position: absolute;
+        top:451px;
+        left:16px;
+        width: 229px;
+        height: 18px;
+        gap: 8px;
+        font-size: 12px;
+    }
+
+.cajaBoton{
+        position:absolute;
+        top: 485px;
+        left:16px;
+        width: 343px;
+        height: 158px;
+        gap: 24px;
+    }
+
+
+.caja3{
+        background: white;
+        width: 327px;
+        height: 186px;
+        top: 707px;
+        left: 24px;
+        border-radius: 32px;
+        box-shadow: 0 24 32 -8 #000000 0.08;
+    }
+
+.caja3 img{
+    display: none;
+}
+
+
+
+
+.salidaTextoGrande{
+
+    top:15px;
+    left:24px;
+    width: 263px;
+    height: 58px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.8px;
+    text-align: center;
+    resize: none;
+}
+
+.salidaTextoChico{
+
+    top:80px;
+    left:24px;
+    width: 263px;
+    height: 48px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    resize: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.copyright{
+        top: 900px ;
+        left: 7px;
+        height:55px;
+        text-align: center;
+        color:#0c36be;
+        font-size: 13px;
+   }
 }
