@@ -5,25 +5,29 @@
 }
 
 .contenedor{
-    background: hsl(227, 60%, 97%);
+    /* background: hsl(227, 60%, 97%); */
     font-family: 'Montserrat', sans-serif;
     position: relative;
     width: 1440px;
     height: 1024px;
 }
 
-
 /* ini.input */
 .caja{
     position: absolute;
     top: 40px;
     left: 40px;
+    width: 120px;
+    height: 48px;
+    gap: 40px;
 }
 
 .entradaTexto{
     position: absolute;
     top: 168px;
     left: 240px;
+    width: 577px;
+    height: 48px;
     font-weight: 400;
     font-size: 32px;
     line-height: 48px;
@@ -34,20 +38,29 @@
     position: absolute;
     top:851px;
     left:240px;
+    width: 229px;
+    height: 18px;
+    gap: 8px;
+    font-size: 12px;
 }
 
 .cajaBoton{
     position:absolute;
     top: 885px;
     left:240px;
+    width: 680px;
+    height: 67px;
+    gap: 24px;
 }
 
 .enviarDes_Encriptar{
     width: 328px;
     height: 67px;
     border-radius: 24px;
+    padding: 24px;
     transition: 1s all;
     cursor:pointer;
+    gap: 8px;
 }
 
 #enc:hover{
@@ -67,9 +80,6 @@
 /* fin.input */
 
 
-
-
-
 /* ini.messages */
 .caja3{
     position: absolute;
@@ -80,6 +90,7 @@
     top: 40px;
     left: 1000px;
     border-radius: 32px;
+    box-shadow: 0 24 32 -8 #000000 0.08;
 }
 
 #munieco{
@@ -89,7 +100,6 @@
     top:283px;
     left: 20px;
 }
-
 
 .salidaTextoGrande{
     position: absolute;
@@ -104,7 +114,6 @@
     resize: none;
 }
 
-
 .salidaTextoChico{
     position: absolute;
     top:675px;
@@ -118,38 +127,11 @@
     resize: none;
 }
 
-
 #enviarCopiar{
     position: absolute; 
     margin: 885px 1032px;
 }
 /* fin.messages */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .copyright{
     position: absolute;
@@ -159,4 +141,47 @@
     text-align: center;
     color:#0c36be;
     font-size: 13px;
+}
+
+
+
+/* media */
+@media screen and (max-width: 480px){
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+body{
+    background: red;
+    }
+
+.contenedor{
+    /* background: hsl(227, 60%, 97%); */
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    width: 375px;
+    height: 933px;
+    top: 3588px;
+    /* left: -2277px; */
+    }
+
+.caja{
+    width: 375px;
+    height: 96px;
+    }
+
+.entradaTexto{
+        position: absolute;
+        top: 152px;
+        left: 26px;
+        width: 343px;
+        height: 48px;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 48px;
+        color: #0a3871;    
+    }
+
 }
