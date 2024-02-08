@@ -5,7 +5,7 @@
 }
 
 .contenedor{
-    /* background: hsl(227, 60%, 97%); */
+    background: hsl(227, 60%, 97%);
     font-family: 'Montserrat', sans-serif;
     position: relative;
     width: 1440px;
@@ -23,6 +23,8 @@
 }
 
 .entradaTexto{
+    background:hsl(227, 60%, 97%);
+    border: none;
     position: absolute;
     top: 168px;
     left: 240px;
@@ -84,7 +86,7 @@
 .caja3{
     position: absolute;
     background: white;
-    float:right;
+/*     float:right; */
     width: 400px;
     height: 944px;
     top: 40px;
@@ -94,11 +96,11 @@
 }
 
 #munieco{
-    position: absolute;
+    position: fixed;
     width: 336px;
     height: 304px;
     top:283px;
-    left: 20px;
+    left: 1032px;
 }
 
 .salidaTextoGrande{
@@ -161,8 +163,12 @@
     }
     
 
+body{
+    background: red;
+}
+
 .contenedor{
-    background: hsl(227, 60%, 97%);
+    /* background: hsl(227, 60%, 97%); */
     font-family: 'Montserrat', sans-serif;
     /* position: absolute; */
     width: 375px;

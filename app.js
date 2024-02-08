@@ -5,7 +5,9 @@ let parrafoGrande = document.getElementsByClassName('salidaTextoGrande');
 let parrafoChico = document.getElementsByClassName('salidaTextoChico');
 let parrafoSalida = document.querySelector('.salidaTextoChico'); //create an object reference to output  //let parrafoSalida = document.querySelector('textarea');
 let entrada = 0;
-let elem2 = document.createElement('textarea');
+let elem2 = document.createElement('textarea');         //crea objeto label para desplegar resultado
+                                                        //var elem2 = document.createElement('label');
+                                                        //var elem2 = document.createElement('textarea');
 
 function encriptar(){   //bandera inicializa
     entrada = 1;
@@ -17,8 +19,7 @@ function encriptar(){   //bandera inicializa
         showHide();
         let verdad = vowelTest(parrafo.value);
         if (verdad == true || verdad > 0) {
-            //console.log("procesa: encuentra vocales y reemplaza");
-            for (letra in parrafo.value){
+            for (letra in parrafo.value){   //console.log("procesa: encuentra vocales y reemplaza");
                 enc = parrafo.value[letra];
                 switch(enc){
                     case 'a':
@@ -43,27 +44,27 @@ function encriptar(){   //bandera inicializa
                 diccionario.push(enc);
                 entrada = 0
             }
-        }
-        //console.log(diccionario.join(''));
+        }   //console.log(diccionario.join(''));
 
-        //crea objeto label para desplegar resultado
-        //var elem2 = document.createElement('label');
-        //var elem2 = document.createElement('textarea');
+
         document.getElementsByTagName('body')[0].appendChild(elem2).style.display="inline";
         elem2.style.position="absolute";
-        elem2.style.top="65px";
-        elem2.style.left="1010px";
-        elem2.style.fontSize= "32px";
+        elem2.style.top="72px";
+        elem2.style.left="1032px";
+        elem2.style.fontFamily="Inter";
         elem2.style.fontWeight= "400";
-        elem2.width="140px";
-        elem2.style.height="800px";
+        elem2.style.fontSize= "24px";
+        elem2.style.lineHeight="36px";
+        elem2.style.color="#495057";
+        elem2.style.width="336px";
+        elem2.style.height="781px";
         elem2.style.border="none";
         elem2.style.resize="none";
         //elem2.innerHTML = "something";    
         elem2.innerHTML = diccionario.join('');    
-        document.getElementsByTagName('body')[0].appendChild(elem2);
+        document.getElementsByTagName('body')[0].appendChild(elem2);    
+        
         //document.getElementsByTagName('body')[0].appendChild(elem2).style.display="none";   //oculta el objeto
-
         //parrafoChico[0].style.display='inline';        
         document.querySelector('.salidaTextoChico').value =  diccionario.join('');
 
@@ -99,8 +100,7 @@ function encriptar(){   //bandera inicializa
 function  desencriptar(){
     showHide();
     let parrafo = document.querySelector('.entradaTexto').value;    //create an object reference to input
-    //console.log("contenido a desencriptar: " + parrafo);
-    const mapObj = {
+    const mapObj = {    //console.log("contenido a desencriptar: " + parrafo);
         ai: "a",
         enter: "e",
         imes: "i",
@@ -108,6 +108,7 @@ function  desencriptar(){
         ufat: "u"
       };
     parrafo = parrafo.replace(/(?:ai|enter|imes|ober|ufat)/gi, matched => mapObj[matched]);        //parrafo = parrafo.replace(/\b(?:ai|enter|imes|ober|ufaqt)\b/gi, matched => mapObj[matched]);
+
     //parrafoSalida.innerHTML = "desEncriptar: " + parrafo;
 
     document.getElementsByTagName('body')[0].appendChild(elem2).style.display="inline";
@@ -120,8 +121,8 @@ function  desencriptar(){
     elem2.style.height="800px";
     elem2.style.border="none";
     elem2.style.resize="none";
-    //document.getElementsByTagName('body')[0].appendChild(elem2);
 
+    //document.getElementsByTagName('body')[0].appendChild(elem2);
 
     elem2.innerHTML = "desEncriptar: " + parrafo;
     document.querySelector('.salidaTextoChico').value = parrafo;
@@ -139,8 +140,10 @@ function copiar(){
         alert("nada que copiar");
     }else{  //recordar que ya se tiene en un diccionario pero esta dentro de una funcion
         parrafo.value = document.querySelector('.salidaTextoChico').value;
+
         //document.getElementsByTagName('body')[0].appendChild(elem2).value=null;
         //document.getElementsByTagName('textarea').value="199ooo";
+
         elem2.style.display="none";
         hideShow();
     }
@@ -152,10 +155,8 @@ function copiar(){
 function showHide(){    //imagen
     oImageDiv.style.display=(oImageDiv.style.display=='none')?'inline':'none';   //set display to inline if currently none, otherwise to none
     parrafoGrande[0].style.display='none';
-    //parrafoChico[0].style.display='none';
-
-
-
+    parrafoChico[0].style.display='none';
+    alert("oculta imagen");
 }
 
 
