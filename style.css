@@ -5,7 +5,7 @@
 }
 
 .contenedor{
-    background: hsl(227, 60%, 97%);
+    /* background: hsl(227, 60%, 97%); */
     font-family: 'Montserrat', sans-serif;
     position: relative;
     width: 1440px;
@@ -154,6 +154,29 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* media */
 @media screen and (max-width: 480px){
 *{
@@ -163,9 +186,9 @@
     }
     
 
-body{
+/* body{
     background: red;
-}
+} */
 
 .contenedor{
     /* background: hsl(227, 60%, 97%); */
@@ -189,15 +212,14 @@ body{
     position: absolute;
     top: 24px;
     left: 16px;
-
     height: 48px;
 }
 
 .entradaTexto{
-        position: absolute;
+/*         position: absolute; */
         top: 152px;
         left: 16px;
-        width: 343px;
+        width: 380px;
         height: 48px;
         font-weight: 400;
         font-size: 32px;

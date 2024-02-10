@@ -5,10 +5,28 @@ let parrafoGrande = document.getElementsByClassName('salidaTextoGrande');
 let parrafoChico = document.getElementsByClassName('salidaTextoChico');
 let parrafoSalida = document.querySelector('.salidaTextoChico'); //create an object reference to output  //let parrafoSalida = document.querySelector('textarea');
 let entrada = 0;
+let cajaBlanca = document.getElementsByClassName('caja3')
 let elem2 = document.createElement('textarea');         //crea objeto label para desplegar resultado
                                                         //var elem2 = document.createElement('label');
                                                         //var elem2 = document.createElement('textarea');
+var mql_1 = window.matchMedia("screen and (max-width: 480px)");
+var mql_2 = window.matchMedia("screen and (max-width: 1024px)");
 
+
+
+
+/* var mql = window.matchMedia('(max-width: 480px)');
+
+function screenTest(e) {
+  if (e.matches) {
+    //* the viewport is 600 pixels wide or less 
+    document.body.style.backgroundColor = 'black';
+  }
+}
+mql.addListener(screenTest); */
+
+
+                                                        
 function encriptar(){   //bandera inicializa
     entrada = 1;
     let palabraNueva = null;
@@ -47,10 +65,13 @@ function encriptar(){   //bandera inicializa
         }   //console.log(diccionario.join(''));
 
 
+
+
         document.getElementsByTagName('body')[0].appendChild(elem2).style.display="inline";
+        
+        elem2.className="salidaDesc"
         elem2.style.position="absolute";
-        elem2.style.top="72px";
-        elem2.style.left="1032px";
+
         elem2.style.fontFamily="Inter";
         elem2.style.fontWeight= "400";
         elem2.style.fontSize= "24px";
@@ -58,10 +79,37 @@ function encriptar(){   //bandera inicializa
         elem2.style.color="#495057";
         elem2.style.width="336px";
         elem2.style.height="781px";
+
+
+        if (mql_1.matches){
+            cajaBlanca.style.display='none';
+
+/*            document.body.style.backgroundColor = 'pink';
+             elem2.style.top="72px";
+            elem2.style.left="132px"; */
+
+            elem2.style.body.backgroundColor ='pink';
+            elem2.style.position="fixed";
+            elem2.style.top="770px";
+            elem2.style.left="40px";
+            elem2.style.width="296px";
+            elem2.style.height="1715px";
+
+            alert(6);
+        }else if (mql_2.matches){
+            alert(999);
+        }else{  //1440
+            elem2.style.top="72px";
+            elem2.style.left="1032px";
+        }
+
+
+
         elem2.style.border="none";
         elem2.style.resize="none";
         //elem2.innerHTML = "something";    
-        elem2.innerHTML = diccionario.join('');    
+        elem2.innerHTML = diccionario.join(''); 
+
         document.getElementsByTagName('body')[0].appendChild(elem2);    
         
         //document.getElementsByTagName('body')[0].appendChild(elem2).style.display="none";   //oculta el objeto
@@ -120,10 +168,13 @@ function  desencriptar(){
     elem2.width="140px";
     elem2.style.height="800px";
     elem2.style.border="none";
-    elem2.style.resize="none";
+    elem2.style.resize="none"
+    
+    document.getElementsByTagName('body')[0].appendChild(elem2); 
 
     //document.getElementsByTagName('body')[0].appendChild(elem2);
 
+    alert(parrafo);
     elem2.innerHTML = "desEncriptar: " + parrafo;
     document.querySelector('.salidaTextoChico').value = parrafo;
 }
@@ -156,7 +207,6 @@ function showHide(){    //imagen
     oImageDiv.style.display=(oImageDiv.style.display=='none')?'inline':'none';   //set display to inline if currently none, otherwise to none
     parrafoGrande[0].style.display='none';
     parrafoChico[0].style.display='none';
-    alert("oculta imagen");
 }
 
 
