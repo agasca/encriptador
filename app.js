@@ -67,6 +67,20 @@ function encriptar(){   //bandera inicializa
 
 
 
+
+
+
+
+
+
+
+
+
+
+//INI.SE ADMINISTRARÁ DESDE CSS
+//
+//
+//
         document.getElementsByTagName('body')[0].appendChild(elem2).style.display="inline";
         
         elem2.className="salidaDesc"
@@ -84,9 +98,9 @@ function encriptar(){   //bandera inicializa
         if (mql_1.matches){
             cajaBlanca.style.display='none';
 
-/*            document.body.style.backgroundColor = 'pink';
-             elem2.style.top="72px";
-            elem2.style.left="132px"; */
+            //document.body.style.backgroundColor = 'pink';
+            //elem2.style.top="72px";
+            //elem2.style.left="132px";
 
             elem2.style.body.backgroundColor ='pink';
             elem2.style.position="fixed";
@@ -109,6 +123,14 @@ function encriptar(){   //bandera inicializa
         elem2.style.resize="none";
         //elem2.innerHTML = "something";    
         elem2.innerHTML = diccionario.join(''); 
+//
+//
+//
+//FIN.SE ADMINISTRARÁ DESDE CSS        
+
+
+
+
 
         document.getElementsByTagName('body')[0].appendChild(elem2);    
         
@@ -159,6 +181,26 @@ function  desencriptar(){
 
     //parrafoSalida.innerHTML = "desEncriptar: " + parrafo;
 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//INI.SE ADMINISTRARÁ DESDE CSS
+//
+//
+//
     document.getElementsByTagName('body')[0].appendChild(elem2).style.display="inline";
     elem2.style.position="absolute";
     elem2.style.top="65px";
@@ -176,6 +218,25 @@ function  desencriptar(){
 
     alert(parrafo);
     elem2.innerHTML = "desEncriptar: " + parrafo;
+//
+//
+//
+//FIN.SE ADMINISTRARÁ DESDE CSS   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     document.querySelector('.salidaTextoChico').value = parrafo;
 }
 
