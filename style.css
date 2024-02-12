@@ -5,7 +5,7 @@
 }
 
 .contenedor{
-    /* background: hsl(227, 60%, 97%); */
+    background: hsl(227, 60%, 97%);
     font-family: 'Montserrat', sans-serif;
     position: relative;
     width: 1440px;
@@ -29,7 +29,7 @@
     top: 168px;
     left: 240px;
     width: 577px;
-    height: 48px;
+    height: 500px;
     font-weight: 400;
     font-size: 32px;
     line-height: 48px;
@@ -83,7 +83,7 @@
 
 
 /* ini.messages */
-.caja3{
+.cajaAnuncio{
     position: absolute;
     background: white;
 /*     float:right; */
@@ -93,6 +93,19 @@
     left: 1000px;
     border-radius: 32px;
     box-shadow: 0 24 32 -8 #000000 0.08;
+}
+
+.cajaAnuncio p{
+    width: 336px;
+    height: 781px;
+    top: 72px;
+    left: 1032px;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
 }
 
 #munieco{
@@ -113,7 +126,7 @@
     font-size: 24px;
     line-height: 28.8px;
     text-align: center;
-    resize: none;
+    /* resize: none; */
 }
 
 .salidaTextoChico{

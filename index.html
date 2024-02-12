@@ -18,30 +18,27 @@
         </div>
     </header>
     <main>
-            <div class="cajaPrincipal">
-                <textarea class="entradaTexto" rows="10" required placeholder="Ingresa el texto aquí" autofocus ></textarea>
-                <label class="anuncioTexto">&#9888; Solo letras minúsculas y sin acentos</label>
-                
-
-                <div class = "cajaBoton">
-                    <button id="enc" class="enviarDes_Encriptar" onclick="encriptar()">Encriptar</button>
-                    <button id="des"class="enviarDes_Encriptar" onclick="desencriptar()">DesEncriptar</button>
-                </div>
+        <div class="cajaPrincipal">
+            <textarea class="entradaTexto" placeholder="Ingresa el texto aquí" autofocus rows="10" cols="50"></textarea>
+            <label class="anuncioTexto">&#9888; Solo letras minúsculas y sin acentos</label>
+            <div class = "cajaBoton">
+                <button id="enc" class="enviarDes_Encriptar" onclick="encriptar()">Encriptar</button>
+                <button id="des"class="enviarDes_Encriptar" onclick="desencriptar()">DesEncriptar</button>
             </div>
-            <div class="caja3">
-                <img id="munieco" src=imagenes/munieco.png alt="Imagen de una persona">
-                <textarea class="salidaTextoGrande" 
-                readonly 
-                style="border: none;"
-                placeholder="Ningún mensaje fue encontrado."></textarea>
-                <textarea class="salidaTextoChico" 
-                readonly
-                style="border: none"
-                placeholder="Ingresa el texto que desees encriptar o desencriptar"></textarea>
-            </div>
-            
-            <button id="enviarCopiar" class="enviarDes_Encriptar" onclick="copiar()">Copiar</button>
-
+        </div>
+        <div class="cajaAnuncio">
+            <p></p>
+            <img id="munieco" src=imagenes/munieco.png alt="Imagen de una persona">
+            <textarea class="salidaTextoGrande" 
+            readonly 
+            style="border: none;"
+            placeholder="Ningún mensaje fue encontrado."></textarea>
+            <textarea class="salidaTextoChico" 
+            readonly
+            style="border: none"
+            placeholder="Ingresa el texto que desees encriptar o desencriptar"></textarea>
+        </div>
+        <button id="enviarCopiar" class="enviarDes_Encriptar" onclick="copiar()">Copiar</button>
     </main>
     <footer>
         <div id ="caja4">
