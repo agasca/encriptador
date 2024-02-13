@@ -13,7 +13,7 @@ let elem2 = document.createElement('textarea');                                 
                                                                                 //var elem2 = document.createElement('textarea');
 let mql_0 = window.matchMedia("screen and (max-width: 1440px)");
 let mql_1 = window.matchMedia("screen and (max-width: 768px)");
-let mql_2 = window.matchMedia("screen and (max-width: 430px)");
+let mql_2 = window.matchMedia("screen and (max-width: 480px)");
 
 
 //FXs                                           
@@ -59,16 +59,16 @@ function encriptar(){                                                           
         document.getElementsByTagName('body')[0].appendChild(elem2).style.display="inline";
         if (mql_2.matches){
             console.log(375);
-            elem2.style.top="702px";
-            elem2.style.left="25px";
+            elem2.style.top="642px";
+            elem2.style.left="20px";
             elem2.style.width="375px";
-            elem2.style.height="1715px";
+            elem2.style.height="1225px";
         } else if  (mql_1.matches){
             console.log(768);
-            elem2.style.top="172px";
-            elem2.style.left="102px";
-            elem2.style.width="296px";
-            elem2.style.height="1715px";
+            elem2.style.top="820px";
+            elem2.style.left="40px";
+            elem2.style.width="700px";
+            elem2.style.height="1020px";
         }else if (mql_0.matches){
             console.log(1440);
             elem2.style.top="72px";
@@ -107,16 +107,16 @@ function  desencriptar(){
     document.getElementsByTagName('body')[0].appendChild(elem2).style.display="inline";
     if (mql_2.matches){
         console.log(375);
-        elem2.style.top="710px";
-        elem2.style.left="26px";
-        elem2.style.width="346px";
-        elem2.style.height="715px";
+        elem2.style.top="642px";
+        elem2.style.left="20px";
+        elem2.style.width="375px";
+        elem2.style.height="1225px";
     } else if  (mql_1.matches){
         console.log(768);
-        elem2.style.top="172px";
-        elem2.style.left="102px";
-        elem2.style.width="346px";
-        elem2.style.height="1715px";
+        elem2.style.top="820px";
+        elem2.style.left="40px";
+        elem2.style.width="700px";
+        elem2.style.height="1020px";
     }else if (mql_0.matches){
         console.log(1440);
         elem2.style.top="72px";
@@ -168,7 +168,7 @@ elem2.style.fontSize= "32px";
 elem2.style.lineHeight="48px";
 elem2.style.color="#495057";
 elem2.style.borderRadius= "32px";
-
+elem2.style.padding="5%";
 
 console.log("fin");
 
@@ -199,6 +199,8 @@ console.log("fin");
  * 
  * fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!
  * 
+ * 
+ * Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.
  * 
  * 
  * Llaves
