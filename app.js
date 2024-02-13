@@ -11,8 +11,9 @@ let elem2 = document.createElement('textarea');                                 
 //let cajaBlanca = document.getElementsByClassName('caja3')
                                                                                 //var elem2 = document.createElement('label');
                                                                                 //var elem2 = document.createElement('textarea');
-//let mql_1 = window.matchMedia("screen and (max-width: 480px)");
-//let mql_2 = window.matchMedia("screen and (max-width: 1024px)");
+let mql_0 = window.matchMedia("screen and (max-width: 1440px)");
+let mql_1 = window.matchMedia("screen and (max-width: 768px)");
+let mql_2 = window.matchMedia("screen and (max-width: 430px)");
 
 
 //FXs                                           
@@ -52,9 +53,34 @@ function encriptar(){                                                           
                 entrada = 0
             }
         }
+
         diccionario = diccionario.join('');                                                                       
+        
+        document.getElementsByTagName('body')[0].appendChild(elem2).style.display="inline";
+        if (mql_2.matches){
+            console.log(375);
+            elem2.style.top="702px";
+            elem2.style.left="25px";
+            elem2.style.width="375px";
+            elem2.style.height="1715px";
+        } else if  (mql_1.matches){
+            console.log(768);
+            elem2.style.top="172px";
+            elem2.style.left="102px";
+            elem2.style.width="296px";
+            elem2.style.height="1715px";
+        }else if (mql_0.matches){
+            console.log(1440);
+            elem2.style.top="72px";
+            elem2.style.left="1032px";
+            elem2.style.width="340px";
+            elem2.style.height="802px";
+        }
+        elem2.innerHTML = diccionario;
+
         //document.querySelector('.cajaAnuncio p').innerHTML = diccionario.join('');
-        document.querySelector('.cajaAnuncio p').innerHTML = diccionario;
+        //document.querySelector('.cajaAnuncio p').innerHTML = diccionario;
+        //document.querySelector('.salidaTextoGrande').innerHTML = diccionario;
     }
     if (entrada == 0){                                                          //inicializa input
         parrafo.value=null;
@@ -66,7 +92,7 @@ function encriptar(){                                                           
 
 
 function  desencriptar(){
-    //showHide();
+    showHide();
     let parrafo = document.querySelector('.entradaTexto').value;    //create an object reference to input
     const mapObj = {    //console.log("contenido a desencriptar: " + parrafo);
         ai: "a",
@@ -77,7 +103,29 @@ function  desencriptar(){
       };
     parrafo = parrafo.replace(/(?:ai|enter|imes|ober|ufat)/gi, matched => mapObj[matched]);        //parrafo = parrafo.replace(/\b(?:ai|enter|imes|ober|ufaqt)\b/gi, matched => mapObj[matched]);
     diccionario = parrafo;
-    document.querySelector('.cajaAnuncio p').innerHTML = parrafo;
+    
+    document.getElementsByTagName('body')[0].appendChild(elem2).style.display="inline";
+    if (mql_2.matches){
+        console.log(375);
+        elem2.style.top="710px";
+        elem2.style.left="26px";
+        elem2.style.width="346px";
+        elem2.style.height="715px";
+    } else if  (mql_1.matches){
+        console.log(768);
+        elem2.style.top="172px";
+        elem2.style.left="102px";
+        elem2.style.width="346px";
+        elem2.style.height="1715px";
+    }else if (mql_0.matches){
+        console.log(1440);
+        elem2.style.top="72px";
+        elem2.style.left="1032px";
+        elem2.style.width="340px";
+        elem2.style.height="802px";
+    }
+    elem2.innerHTML = diccionario;
+    //document.querySelector('.salidaTextoGrande').innerHTML = parrafo;
     //console.log(diccionario);
     showHide(); 
 }
@@ -95,15 +143,31 @@ if(!diccionario.length){                                                        
         console.log("nada que copiar");
     }else{                                                                          
         parrafo.value = diccionario;                                            //parrafo.value = diccionario.join(''); //regresar el foco al input
+        elem2.innerHTML = " ";
     }
 }
 
 
 function showHide(){    //imagen
     oImageDiv.style.display=(oImageDiv.style.display=='inline')?'none':'inline';   //set display to inline if currently none, otherwise to none
+    //document.querySelector('.salidaTextoChico').innerHTML = " ";
     parrafoGrande[0].style.display='none';
     parrafoChico[0].style.display='none';
+    document.querySelector('.cajaAnuncio').display='none';
 }
+
+
+document.getElementsByTagName('body')[0].appendChild(elem2).style.display="none";
+elem2.className="salidaDesc";
+elem2.style.position="absolute";
+elem2.style.border="none";
+elem2.style.resize="none";
+elem2.style.fontFamily="Inter";
+elem2.style.fontWeight= "400";
+elem2.style.fontSize= "32px";
+elem2.style.lineHeight="48px";
+elem2.style.color="#495057";
+elem2.style.borderRadius= "32px";
 
 
 console.log("fin");

@@ -5,7 +5,7 @@
 }
 
 .contenedor{
-    background: hsl(227, 60%, 97%);
+    /* background: hsl(227, 60%, 97%); */
     font-family: 'Montserrat', sans-serif;
     position: relative;
     width: 1440px;
@@ -109,11 +109,11 @@
 }
 
 #munieco{
-    position: fixed;
+    position: absolute;
     width: 336px;
     height: 304px;
     top:283px;
-    left: 1032px;
+    left: 32px;
 }
 
 .salidaTextoGrande{
@@ -167,30 +167,20 @@
 
 
 
+/**
+          .         .                                                                           
+         ,8.       ,8.          8 8888888888   8 888888888o.       8 8888          .8.          
+        ,888.     ,888.         8 8888         8 8888    `^888.    8 8888         .888.         
+       .`8888.   .`8888.        8 8888         8 8888        `88.  8 8888        :88888.        
+      ,8.`8888. ,8.`8888.       8 8888         8 8888         `88  8 8888       . `88888.       
+     ,8'8.`8888,8^8.`8888.      8 888888888888 8 8888          88  8 8888      .8. `88888.      
+    ,8' `8.`8888' `8.`8888.     8 8888         8 8888          88  8 8888     .8`8. `88888.     
+   ,8'   `8.`88'   `8.`8888.    8 8888         8 8888         ,88  8 8888    .8' `8. `88888.    
+  ,8'     `8.`'     `8.`8888.   8 8888         8 8888        ,88'  8 8888   .8'   `8. `88888.   
+ ,8'       `8        `8.`8888.  8 8888         8 8888    ,o88P'    8 8888  .888888888. `88888.  
+,8'         `         `8.`8888. 8 888888888888 8 888888888P'       8 8888 .8'       `8. `88888. 
+*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* media */
 @media screen and (max-width: 480px){
 *{
     margin:0;
@@ -199,12 +189,9 @@
     }
     
 
-/* body{
-    background: red;
-} */
-
 .contenedor{
     /* background: hsl(227, 60%, 97%); */
+    background: red;
     font-family: 'Montserrat', sans-serif;
     /* position: absolute; */
     width: 375px;
@@ -260,7 +247,7 @@
     }
 
 
-.caja3{
+.cajaAnuncio{
         background: white;
         width: 327px;
         height: 186px;
@@ -270,12 +257,10 @@
         box-shadow: 0 24 32 -8 #000000 0.08;
     }
 
-.caja3 img{
+
+.cajaAnuncio img{
     display: none;
 }
-
-
-
 
 .salidaTextoGrande{
 
@@ -303,8 +288,11 @@
     resize: none;
 }
 
-
-
+.enviarDes_Encriptar #enviarCopiar{
+    position: absolute;
+    top:800px;
+    left:3px;
+}
 
 
 
