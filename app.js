@@ -12,8 +12,8 @@ let elem2 = document.createElement('textarea');                                 
                                                                                 //var elem2 = document.createElement('label');
                                                                                 //var elem2 = document.createElement('textarea');
 let mql_0 = window.matchMedia("screen and (max-width: 1440px)");
-let mql_1 = window.matchMedia("screen and (max-width: 768px)");
-let mql_2 = window.matchMedia("screen and (max-width: 480px)");
+let mql_1 = window.matchMedia("screen and (max-width:  768px)");
+let mql_2 = window.matchMedia("screen and (max-width:  480px)");
 
 
 //FXs                                           
@@ -58,19 +58,19 @@ function encriptar(){                                                           
         
         document.getElementsByTagName('body')[0].appendChild(elem2).style.display="inline";
         if (mql_2.matches){
-            console.log(375);
+            console.log("CEL");
             elem2.style.top="642px";
             elem2.style.left="20px";
             elem2.style.width="375px";
             elem2.style.height="1225px";
-        } else if  (mql_1.matches){
-            console.log(768);
+        } else if (mql_1.matches){
+            console.log("Tablet");
             elem2.style.top="820px";
             elem2.style.left="40px";
             elem2.style.width="700px";
             elem2.style.height="1020px";
         }else if (mql_0.matches){
-            console.log(1440);
+            console.log("PC");
             elem2.style.top="72px";
             elem2.style.left="1032px";
             elem2.style.width="340px";
@@ -87,14 +87,14 @@ function encriptar(){                                                           
         parrafo.focus();                                                        //document.querySelector('.entradaTexto').focus();
         parrafo.placeholder = "Ingresa el texto aquí.";
         showHide(); 
-    }                                                                               //console.log(document.querySelector('.cajaAnuncio p'));
+    }                                                                           //console.log(document.querySelector('.cajaAnuncio p'));
 }
 
 
 function  desencriptar(){
     showHide();
-    let parrafo = document.querySelector('.entradaTexto').value;    //create an object reference to input
-    const mapObj = {    //console.log("contenido a desencriptar: " + parrafo);
+    let parrafo = document.querySelector('.entradaTexto').value;                //create an object reference to input
+    const mapObj = {                                                            //console.log("contenido a desencriptar: " + parrafo);
         ai: "a",
         enter: "e",
         imes: "i",
@@ -149,7 +149,7 @@ if(!diccionario.length){                                                        
 
 
 function showHide(){    //imagen
-    oImageDiv.style.display=(oImageDiv.style.display=='inline')?'none':'inline';   //set display to inline if currently none, otherwise to none
+    oImageDiv.style.display=(oImageDiv.style.display=='inline')?'none':'inline';//set display to inline if currently none, otherwise to none
     //document.querySelector('.salidaTextoChico').innerHTML = " ";
     parrafoGrande[0].style.display='none';
     parrafoChico[0].style.display='none';

@@ -7,7 +7,7 @@
 }
 
 .contenedor{
-    /* background: hsl(227, 60%, 97%); */
+    background: hsl(227, 60%, 97%);
     font-family: 'Montserrat', sans-serif;
     position: relative;
     width: 1440px;
@@ -182,130 +182,6 @@
 */
 
 
-/*
-/  __ \    | | |
-| /  \/ ___| | |
-| |    / _ \ | |
-| \__/\  __/ | |
- \____/\___|_|_|
-*/
-@media screen and (max-width: 480px){
-    *{
-        margin:0;
-        padding: 0;
-        box-sizing: border-box;
-        }
-        
-    .contenedor{
-        background: hsl(227, 60%, 97%);
-        font-family: 'Montserrat', sans-serif;
-        width: 375px;
-        height: 933px;
-        }
-
-    .caja{
-        top: 0;
-        left: 0;
-        width: 375px;
-        height: 96px;
-        }
-
-    .caja img{
-        position: absolute;
-        top: 24px;
-        left: 16px;
-        height: 48px;
-        }
-
-    .entradaTexto{
-            top: 152px;
-            left: 16px;
-            width: 380px;
-            height: 48px;
-            font-weight: 400;
-            font-size: 32px;
-            line-height: 48px;
-            color: #0a3871;    
-        }
-
-    .anuncioTexto{
-            position: absolute;
-            top:451px;
-            left:16px;
-            width: 229px;
-            height: 18px;
-            gap: 8px;
-            font-size: 12px;
-        }
-
-    .cajaBoton{
-            position:absolute;
-            top: 485px;
-            left:16px;
-            width: 343px;
-            height: 158px;
-            gap: 24px;
-        }
-
-    .cajaAnuncio{
-            background: white;
-            width: 327px;
-            height: 186px;
-            top: 707px;
-            /* left: 24px; */
-            left: var(--izqCel);
-            border-radius: 32px;
-            box-shadow: 0 24 32 -8 #000000 0.08;
-        }
-
-    .cajaAnuncio img{
-        display: none;
-        }
-
-    .salidaTextoGrande{
-        top:15px;
-        /* left:24px; */
-        left: var(--izqCel);
-        width: 263px;
-        height: 58px;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28.8px;
-        text-align: center;
-        resize: none;
-        }
-
-    .salidaTextoChico{
-        top:80px;
-        /* left:24px; */
-        left: var(--izqCel);
-        width: 263px;
-        height: 48px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        text-align: center;
-        resize: none;
-        }
-
-    #enviarCopiar{
-        position: absolute; 
-        top: 1876px;
-        left: 16px;
-        }
-
-    .copyright{
-            top: 1955px ;
-            left: 7px;
-            height:55px;
-            text-align: center;
-            color:#0c36be;
-            font-size: 13px;
-        }
-}
-
-
-
 
 /*
 _____     _     _      _   
@@ -429,3 +305,130 @@ _____     _     _      _
         font-size: 13px;
     }
 }
+
+
+
+/*
+/  __ \    | | |
+| /  \/ ___| | |
+| |    / _ \ | |
+| \__/\  __/ | |
+ \____/\___|_|_|
+*/
+@media only screen and (max-width: 480px){
+    *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        
+    .contenedor{
+        background: hsl(227, 60%, 97%);
+        font-family: 'Montserrat', sans-serif;
+        width: 375px;
+        height: 933px;
+        }
+
+    .caja{
+        top: 0;
+        left: 0;
+        width: 375px;
+        height: 96px;
+        }
+
+    .caja img{
+        position: absolute;
+        top: 24px;
+        left: 16px;
+        height: 48px;
+        }
+
+    .entradaTexto{
+            top: 152px;
+            left: 16px;
+            width: 380px;
+            height: 48px;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 48px;
+            color: #0a3871;    
+        }
+
+    .anuncioTexto{
+            position: absolute;
+            top:451px;
+            left:16px;
+            width: 229px;
+            height: 18px;
+            gap: 8px;
+            font-size: 12px;
+        }
+
+    .cajaBoton{
+            position:absolute;
+            top: 485px;
+            left:16px;
+            width: 343px;
+            height: 158px;
+            gap: 24px;
+        }
+
+    .cajaAnuncio{
+            background: white;
+            width: 327px;
+            height: 186px;
+            top: 707px;
+            /* left: 24px; */
+            left: var(--izqCel);
+            border-radius: 32px;
+            box-shadow: 0 24 32 -8 #000000 0.08;
+        }
+
+    .cajaAnuncio img{
+        display: none;
+        }
+
+    .salidaTextoGrande{
+        top:15px;
+        /* left:24px; */
+        left: var(--izqCel);
+        width: 263px;
+        height: 58px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28.8px;
+        text-align: center;
+        resize: none;
+        }
+
+    .salidaTextoChico{
+        top:80px;
+        /* left:24px; */
+        left: var(--izqCel);
+        width: 263px;
+        height: 48px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        resize: none;
+        }
+
+    #enviarCopiar{
+        position: absolute; 
+        top: 1876px;
+        left: 16px;
+        width: 370px;
+        }
+
+    .copyright{
+            top: 1955px ;
+            left: 7px;
+            height:55px;
+            text-align: center;
+            color:#0c36be;
+            font-size: 13px;
+        }
+}
+
+
