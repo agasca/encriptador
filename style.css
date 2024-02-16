@@ -1,5 +1,6 @@
 :root{ --izqCel: 24px;}
 :root{ --izqTab: 40px;}
+
 *{
     margin:0;
     padding: 0;
@@ -10,7 +11,8 @@
     background: hsl(227, 60%, 97%);
     font-family: 'Montserrat', sans-serif;
     position: relative;
-    width: 1440px;
+    /* width: 1440px; */
+    width: 1024px;
     height: 1024px;
     }
 
@@ -28,8 +30,10 @@
     background:hsl(227, 60%, 97%);
     border: none;
     position: absolute;
-    top: 168px;
-    left: 240px;
+    /* top: 168px; */
+    top: 128px;
+    /* left: 240px; */
+    left: 40px;
     width: 577px;
     height: 500px;
     font-weight: 400;
@@ -40,8 +44,10 @@
 
 .anuncioTexto{
     position: absolute;
-    top:851px;
-    left:240px;
+    /* top:851px; */
+    top:651px;
+    /* left: 240px; */
+    left:40px;
     width: 229px;
     height: 18px;
     gap: 8px;
@@ -50,9 +56,11 @@
 
 .cajaBoton{
     position:absolute;
-    top: 885px;
-    left:240px;
-    width: 680px;
+    /* top: 885px; */
+    top: 685px;
+    /* left: 240px; */
+    left: 40px;
+    width: 680px ;
     height: 67px;
     gap: 24px;
     }
@@ -90,9 +98,11 @@
     background: white;
     /* float:right; */
     width: 400px;
-    height: 944px;
+    /* height: 944px; */
+    height: 600px;
     top: 40px;
-    left: 1000px;
+    /* left: 1000px; */
+    left: 800px;
     border-radius: 32px;
     box-shadow: 0 24 32 -8 #000000 0.08;
     }
@@ -101,6 +111,7 @@
     width: 336px;
     height: 781px;
     top: 72px;
+
     left: 1032px;
     font-family: Inter;
     font-size: 24px;
@@ -114,13 +125,15 @@
     position: absolute;
     width: 336px;
     height: 304px;
-    top:283px;
+    /* top:283px; */
+    top:83px;
     left: 32px;
     }
 
 .salidaTextoGrande{
     position: absolute;
-    top:619px;
+    /* top:619px; */
+    top:419px;
     left:50px;
     width: 336px;
     height: 58px;
@@ -133,7 +146,8 @@
 
 .salidaTextoChico{
     position: absolute;
-    top:675px;
+    /* top:675px; */
+    top:475px;
     left:50px;
     width: 336px;
     height: 48px;
@@ -147,15 +161,19 @@
 #enviarCopiar{
     position: absolute; 
     /* margin: 885px 1032px; */
-    top: 885px;
-    left: 1032px;
+    /* top: 885px; */
+    top: 685px;
+    /* left: 1032px; */
+    left: 832px;
     }
 /* fin.messages */
 
 .copyright{
     position: absolute;
-    top: 970px ;
-    left: 240px;
+    /* top: 970px ; */
+    top: 770px ;
+    /* left: 240px; */
+    left: 40px;
     height:55px;
     text-align: center;
     color:#0c36be;

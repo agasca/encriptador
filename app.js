@@ -71,10 +71,14 @@ function encriptar(){                                                           
             elem2.style.height="1020px";
         }else if (mql_0.matches){
             console.log("PC");
-            elem2.style.top="72px";
-            elem2.style.left="1032px";
+            //elem2.style.top="72px";
+            elem2.style.top="36px";
+            //elem2.style.left="1032px"; 
+            //elem2.style.left="832px"; 
+            elem2.style.left="811px";
             elem2.style.width="340px";
-            elem2.style.height="802px";
+            //elem2.style.height="802px";
+            elem2.style.height="602px";
         }
         elem2.innerHTML = diccionario;
 
@@ -119,10 +123,14 @@ function  desencriptar(){
         elem2.style.height="1020px";
     }else if (mql_0.matches){
         console.log(1440);
-        elem2.style.top="72px";
-        elem2.style.left="1032px";
+        //elem2.style.top="72px";
+        //elem2.style.left="1032px";
+        //elem2.style.width="340px";
+        //elem2.style.height="802px";
+        elem2.style.top="36px";
+        elem2.style.left="811px";
         elem2.style.width="340px";
-        elem2.style.height="802px";
+        elem2.style.height="602px";
     }
     elem2.innerHTML = diccionario;
     //document.querySelector('.salidaTextoGrande').innerHTML = parrafo;
